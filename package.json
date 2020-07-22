@@ -1,0 +1,67 @@
+{
+  "name": "AabInstalllHelp",
+  "icon": "waka_logo.png",
+  "version": "1.0.2",
+  "description": "aab ",
+  "main": "main.js",
+  "scripts": {
+    "start": "npm run pre_asset_mac && electron .",
+    "start_win": "npm run pre_asset_win && chcp 65001 & electron .",
+    "clean_assets": "rm -rf ./assets",
+    "pre_asset_mac": "rm -rf ./assets && cp -r ./assets_common/ ./assets && cp -r ./bin_mac/ ./assets",
+    "pre_asset_win": "rmdir /s/q .\\assets && mkdir .\\assets && copy .\\assets_common .\\assets && xcopy .\\bin_win .\\assets /S/Y",
+    "elepack": "electron-packager . --overwrite",
+    "elebuild_mac": "npm run pre_asset_mac && electron-builder",
+    "elebuild_win": "npm run pre_asset_win && electron-builder"
+  },
+  "keywords": [
+    "start",
+    "elebuild"
+  ],
+  "build": {
+    "productName": "AabInstalllHelp",
+    "appId": "com.fireantzhang.aabinstallhelp",
+    "extraResources": [
+      {
+        "from": "assets",
+        "to": "assets"
+      }
+    ],
+    "files": [
+      "index.html",
+      "main.js",
+      "process.js",
+      "handle_drag.js",
+      "style.css"
+    ],
+    "mac": {
+      
+      "asar": false,
+      "category": "aab install help tool",
+      "target": [
+        "dmg"
+      ],
+      "icon": "icon.png"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "directories": {
+      "buildResources": "resources",
+      "output": "release"
+    }
+  },
+  "author": "fireantzhang",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^7.1.6",
+    "electron-builder": "^21.2.0",
+    "electron-packager": "^14.1.1"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "xmlreader": "^0.2.3"
+  }
+}

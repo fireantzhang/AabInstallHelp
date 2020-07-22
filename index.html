@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>安装 aab 程序包</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="holder" class="dropify-wrapper" onclick="showSelectAabFile()">
+        <div id="message" class="dropify-message">
+            点击或将文件拖拽到此区域处理(aab 格式的安装包)
+        </div>
+    </div>
+
+    <div id="log" class="log-wrapper">
+
+    </div>
+
+    <script type="text/javascript" src="./handle_drag.js"></script>
+    <script type="text/javascript" src="./process.js"></script>
+</body>
+
+</html>

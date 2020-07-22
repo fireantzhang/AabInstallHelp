@@ -1,0 +1,40 @@
+.dropify-wrapper, .dropify-wrapper-ondrag {
+    /* height: 200px; */
+    height: 190px;
+    max-width: 100%;
+    font-size: 14px;
+    padding: 20px 10px;
+    color: #777;
+    background-color: #FFF;
+    text-align: center;
+    border: 2px dashed #E5E5E5;
+}
+
+.log-wrapper {
+    height: 100%;
+    position: relative;
+    top: 42%;
+    font-size: 14px;
+    text-align: left;
+    color: #777;
+    background-color: #FFF;
+}
+
+.dropify-wrapper-ondrag  {
+    border: 3px dashed rgb(7, 176, 243);
+}
+
+.dropify-message {
+    position: relative;
+    top: 42%;
+}
+
+.date-select {
+    padding-bottom: 10px;
+}
+
+span {
+    font-size: 14px;
+    padding: 5px 10px;
+    color: #777;
+}
