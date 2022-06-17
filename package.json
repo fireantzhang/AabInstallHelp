@@ -56,7 +56,7 @@
   "author": "fireantzhang",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^7.1.6",
+    "electron": "^15.5.5",
     "electron-builder": "^21.2.0",
     "electron-packager": "^14.1.1"
   },
